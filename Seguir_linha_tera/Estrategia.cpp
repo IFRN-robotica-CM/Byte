@@ -6,6 +6,7 @@ void Estrategia::executar(){
 }
 
 void Estrategia::seguirLinha(){
+  sensor.ler();
   if(sensor.pppp()){
     motor.pare();
   }
