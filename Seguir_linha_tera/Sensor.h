@@ -1,9 +1,14 @@
+#define DBP_ME 90
+#define DBP_E 35
+#define DBP_D 45
+#define DBP_MD 75
+
 class Sensor{
   float valorSensorDir;
   float valorSensorEsq;
   float valorSensorMaisDir;
   float valorSensorMaisEsq;
-  
+
   public:
   // Identifica quando todos os sensores não detectarem linha
   bool bbbb(){return (valorSensorMaisEsq > DBP_ME && valorSensorEsq > DBP_E && valorSensorDir > DBP_D && valorSensorMaisDir > DBP_MD);}
