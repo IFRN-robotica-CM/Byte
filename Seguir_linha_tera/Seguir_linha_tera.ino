@@ -18,10 +18,10 @@
 //SENSOR_LINHA_MAIS_DIREITO			A0	
 //-----PINOS PARA SENSORES REFLETANCIA-----//
 
-#define DBP_ME 50
+#define DBP_ME 90
 #define DBP_E 35
 #define DBP_D 45
-#define DBP_MD 50
+#define DBP_MD 75
 
 float valorSensorDir;
 float valorSensorEsq;
