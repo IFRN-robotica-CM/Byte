@@ -2,10 +2,17 @@
 
 
 void Estrategia::executar(){
-  seguirLinha();
+  if (distancia.ler()> 30){
+    seguirLinha();
+  }
+  else{
+    desviarObstaculo();
+  }
 }
 
 void Estrategia::seguirLinha(){
+
+  
   sensor.ler();
   if(sensor.pppp()){
     motor.pare();
@@ -13,5 +20,10 @@ void Estrategia::seguirLinha(){
   else if (sensor.bbbb()){
     motor.emFrente();
   }
+  
 
+}
+
+void Estrategia::desviarObstaculo(){
+  
 }
