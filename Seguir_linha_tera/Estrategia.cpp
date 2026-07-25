@@ -1,6 +1,5 @@
 #include "Estrategia.h"
 
-
 void Estrategia::executar(){
   if (distancia.ler()> 30){
     seguirLinha();
@@ -11,17 +10,13 @@ void Estrategia::executar(){
 }
 
 void Estrategia::seguirLinha(){
-
-  
-  sensor.ler();
-  if(sensor.pppp()){
+  refletancia.ler();
+  if(refletancia.pppp()){
     motor.pare();
   }
-  else if (sensor.bbbb()){
-    motor.emFrente();
+  else if (refletancia.bbbb()){
+    motor.seguirEmFrente();
   }
-  
-
 }
 
 void Estrategia::desviarObstaculo(){

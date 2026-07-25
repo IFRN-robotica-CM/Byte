@@ -1,10 +1,9 @@
-#include "Sensor.h"
+#include "Refletancia.h"
 #include "Motor.h"
 
 class Estrategia{
-
   private:
-  Sensor sensor;
+  Refletancia refletancia;
   Motor motor;
 
   void desviarObstaculo();

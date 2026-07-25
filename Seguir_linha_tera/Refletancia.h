@@ -1,9 +1,9 @@
-#define DBP_ME 90
-#define DBP_E 35
-#define DBP_D 45
-#define DBP_MD 75
+#define DBP_ME 90 // Divisor branco e preto do sensor Mais Esquerdo
+#define DBP_E 35  // Divisor branco e preto do sensor Esquerdo
+#define DBP_D 45  // Divisor branco e preto do sensor Direito
+#define DBP_MD 75 // Divisor branco e preto do sensor Mais Direito
 
-class Sensor{
+class Refletancia{
   float valorSensorDir;
   float valorSensorEsq;
   float valorSensorMaisDir;
@@ -43,6 +43,6 @@ class Sensor{
   // Identifica quando todos detectarem linha
   bool pppp(){return (valorSensorMaisEsq < DBP_ME && valorSensorEsq < DBP_E && valorSensorDir < DBP_D && valorSensorMaisDir < DBP_MD);}
 
-
   void ler();
+  void print();
 };
