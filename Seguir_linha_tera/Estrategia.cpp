@@ -11,11 +11,37 @@ void Estrategia::executar(){
 
 void Estrategia::seguirLinha(){
   refletancia.ler();
-  if(refletancia.pppp()){
+
+  // Frente e parar
+  if (refletancia.bbbb()){
+    motor.frente();
+  }
+  else if(refletancia.pppp()){
     motor.parar();
   }
-  else if (refletancia.bbbb()){
-    motor.frente();
+
+  // Curvas fortes
+  else if (refletancia.bbbp()){
+    motor.curvaForteEsq();
+  }
+  else if (refletancia.pbbb()){
+    motor.curvaForteDir();
+  }
+
+  // Curvas médias
+  else if (refletancia.bbpp()){
+    motor.curvaMediaEsq();
+  }
+  else if (refletancia.ppbb()){
+    motor.curvaMediaDir();
+  }
+
+  // Curvas fracas
+  else if (refletancia.bbpb()){
+    motor.curvaFracaEsq();
+  }
+  else if (refletancia.bpbb()){
+    motor.curvaFracaDir();
   }
 }
 

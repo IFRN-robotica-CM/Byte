@@ -11,5 +11,4 @@ class Estrategia{
 
   public:
   void executar();
-
 };
