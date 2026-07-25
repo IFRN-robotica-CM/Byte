@@ -1,21 +1,21 @@
 #include "Estrategia.h"
 
 void Estrategia::executar(){
-  if (distancia.ler()> 30){
+  // if (distancia.ler()> 30){
     seguirLinha();
-  }
-  else{
-    desviarObstaculo();
-  }
+  // }
+  // else{
+  //   desviarObstaculo();
+  // }
 }
 
 void Estrategia::seguirLinha(){
   refletancia.ler();
   if(refletancia.pppp()){
-    motor.pare();
+    motor.parar();
   }
   else if (refletancia.bbbb()){
-    motor.seguirEmFrente();
+    motor.frente();
   }
 }
 
