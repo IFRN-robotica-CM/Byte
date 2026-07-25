@@ -2,6 +2,7 @@
 #include <Servo.h>
 #include "Estrategia.h"
 
+Estrategia estrategia;
 
 //-----PINOS PARA LIGAR MOTORES-----//
 //Motor1:
