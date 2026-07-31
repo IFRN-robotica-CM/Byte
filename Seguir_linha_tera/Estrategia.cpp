@@ -13,11 +13,8 @@ void Estrategia::seguirLinha(){
   refletancia.ler();
 
   // Frente e parar
-  if (refletancia.bbbb() || refletancia.bppb()){
+  if (refletancia.bbbb() || refletancia.bppb() || refletancia.pppp()){
     motor.frente();
-  }
-  else if(refletancia.pppp()){
-    motor.parar();
   }
 
   // Curvas fortes
