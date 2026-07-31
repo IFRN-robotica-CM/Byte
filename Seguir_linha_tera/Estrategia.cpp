@@ -13,7 +13,7 @@ void Estrategia::seguirLinha(){
   refletancia.ler();
 
   // Frente e parar
-  if (refletancia.bbbb()){
+  if (refletancia.bbbb() || refletancia.bppb()){
     motor.frente();
   }
   else if(refletancia.pppp()){
