@@ -1,6 +1,6 @@
-#define DBP_ME 90 // Divisor branco e preto do sensor Mais Esquerdo
-#define DBP_E 35  // Divisor branco e preto do sensor Esquerdo
-#define DBP_D 45  // Divisor branco e preto do sensor Direito
+#define DBP_ME 75 // Divisor branco e preto do sensor Mais Esquerdo
+#define DBP_E 75  // Divisor branco e preto do sensor Esquerdo
+#define DBP_D 88  // Divisor branco e preto do sensor Direito
 #define DBP_MD 75 // Divisor branco e preto do sensor Mais Direito
 
 class Refletancia{
