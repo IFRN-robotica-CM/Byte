@@ -18,5 +18,5 @@ void Refletancia::print(){
 	Serial.print("; dir: ");
 	Serial.print(valorSensorDir);       //Imprime o valor do sensor direito pela porta serial
 	Serial.print("; +dir: ");
-	Serial.println(valorSensorMaisDir);
+	Serial.println(valorSensorMaisDir); //Imprime o valor do sensor mais direito pela porta serial
 }
