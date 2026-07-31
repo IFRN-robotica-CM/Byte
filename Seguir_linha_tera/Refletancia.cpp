@@ -20,3 +20,39 @@ void Refletancia::print(){
 	Serial.print("; +dir: ");
 	Serial.println(valorSensorMaisDir);
 }
+
+void Refletancia::print_preto_branco(){
+	ler();
+
+	Serial.print("Sensores refletancia: +esq: ");
+	if (valorSensorMaisEsq > DBP_ME) {
+		Serial.print("Branco");
+	}
+	else {
+		Serial.print("Preto");
+	}
+	
+	Serial.print("; esq: ");
+	if (valorSensorEsq > DBP_E) {
+		Serial.print("Branco");
+	}
+	else {
+		Serial.print("Preto");
+	}
+	
+	Serial.print("; dir: ");
+	if (valorSensorDir > DBP_D) {
+		Serial.print("Branco");
+	}
+	else {
+		Serial.print("Preto");
+	}
+	
+	Serial.print("; +dir: ");
+	if (valorSensorMaisDir > DBP_MD) {
+		Serial.println("Branco");
+	}
+	else {
+		Serial.println("Preto");
+	}
+}

@@ -29,6 +29,7 @@ void setup(){
 
 void loop(){
   refletancia.print();
+  refletancia.print_preto_branco();
   delay(1000);
   // estrategia.executar();
 }
