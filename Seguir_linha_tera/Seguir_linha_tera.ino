@@ -2,6 +2,7 @@
 #include <Servo.h>
 #include "Estrategia.h"
 
+Refletancia refletancia;
 Estrategia estrategia;
 
 //-----PINOS PARA LIGAR MOTORES-----//
@@ -27,5 +28,7 @@ void setup(){
 }
 
 void loop(){
-  estrategia.executar();
+  refletancia.print();
+  delay(1000);
+  // estrategia.executar();
 }
