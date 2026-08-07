@@ -3,6 +3,7 @@
 #include "Estrategia.h"
 
 Estrategia estrategia;
+Distancia sensor;
 
 //-----PINOS PARA LIGAR MOTORES-----//
 //Motor1:
@@ -27,5 +28,6 @@ void setup(){
 }
 
 void loop(){
-  estrategia.executar();
+  // estrategia.executar();
+  sensor.print();
 }
