@@ -1,12 +1,13 @@
+#include <robo_hardware2.h>
 #include "Estrategia.h"
 
 void Estrategia::executar(){
-  // if (distancia.ler()> 30){
+  if (distancia.ler()> 30){
     seguirLinha();
-  // }
-  // else{
-  //   desviarObstaculo();
-  // }
+  }
+  else{
+    desviarObstaculo();
+  }
 }
 
 void Estrategia::seguirLinha(){
@@ -43,5 +44,20 @@ void Estrategia::seguirLinha(){
 }
 
 void Estrategia::desviarObstaculo(){
-  
+  motor.tras();
+  delay(500);
+  motor.curvaForteDir();
+  delay(2000);
+  motor.frente();
+  delay(1000);
+  motor.curvaForteEsq();
+  delay(2000);
+  motor.frente();
+  delay(3000);
+  motor.curvaForteEsq();
+  delay(2000);
+  motor.frente();
+  delay(1000);
+  motor.curvaForteDir();
+  delay(2000);
 }
