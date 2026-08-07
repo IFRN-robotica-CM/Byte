@@ -4,4 +4,4 @@ class Distancia{
   public:
   void ler();
   void print();
-}
+};

@@ -1,5 +1,6 @@
 #include "Refletancia.h"
 #include "Motor.h"
+#include "Distancia.h"
 
 class Estrategia{
   private:

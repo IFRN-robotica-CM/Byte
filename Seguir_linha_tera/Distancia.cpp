@@ -8,6 +8,6 @@ void Distancia::ler(){
 void Distancia::print(){
   ler();
 
-  Serial.print("Valor Distância Laser em mm: ")
+  Serial.print("Valor Distância Laser em mm: ");
   Serial.println(ValorDistanciaLaser);
 }
