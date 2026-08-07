@@ -2,7 +2,7 @@
 #include "Estrategia.h"
 
 void Estrategia::executar(){
-  if (distancia.ler() < 25 || distancia.ler() > 30){
+  if (distancia.ler() > 30){
     seguirLinha();
   }
   else{
@@ -49,15 +49,15 @@ void Estrategia::desviarObstaculo(){
   motor.curvaForteDir();
   delay(2000);
   motor.frente();
-  delay(1000);
+  delay(1500);
   motor.curvaForteEsq();
   delay(2000);
   motor.frente();
   delay(3000);
   motor.curvaForteEsq();
-  delay(2000);
+  delay(2500);
   motor.frente();
-  delay(1000);
+  delay(1500);
   motor.curvaForteDir();
   delay(2000);
 }
