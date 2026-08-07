@@ -1,8 +1,9 @@
 #include "Distancia.h"
 #include <robo_hardware2.h>
 
-void Distancia::ler(){
+int Distancia::ler(){
   ValorDistanciaLaser = robo.lerSensorLaserFrontal();
+  return ValorDistanciaLaser;
 }
 
 void Distancia::print(){
@@ -10,4 +11,5 @@ void Distancia::print(){
 
   Serial.print("Valor Distância Laser em mm: ");
   Serial.println(ValorDistanciaLaser);
+  delay(500);
 }

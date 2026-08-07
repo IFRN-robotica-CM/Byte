@@ -2,6 +2,6 @@ class Distancia{
   int ValorDistanciaLaser;
 
   public:
-  void ler();
+  int ler();
   void print();
 };
