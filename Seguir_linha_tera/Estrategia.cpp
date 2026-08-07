@@ -2,7 +2,7 @@
 #include "Estrategia.h"
 
 void Estrategia::executar(){
-  if (distancia.ler()> 30){
+  if (distancia.ler() < 25 || distancia.ler() > 30){
     seguirLinha();
   }
   else{
