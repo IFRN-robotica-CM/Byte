@@ -2,8 +2,8 @@
 #include <Servo.h>
 #include "Estrategia.h"
 
-Refletancia refletancia;
 Estrategia estrategia;
+Refletancia refletancia;
 
 //-----PINOS PARA LIGAR MOTORES-----//
 //Motor1:

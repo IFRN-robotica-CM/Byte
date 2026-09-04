@@ -1,23 +1,21 @@
+#include <robo_hardware2.h>
 #include "Estrategia.h"
 
 void Estrategia::executar(){
-  // if (distancia.ler()> 30){
+  if (distancia.ler() > 30){
     seguirLinha();
-  // }
-  // else{
-  //   desviarObstaculo();
-  // }
+  }
+  else{
+    desviarObstaculo();
+  }
 }
 
 void Estrategia::seguirLinha(){
   refletancia.ler();
 
   // Frente e parar
-  if (refletancia.bbbb()){
+  if (refletancia.bbbb() || refletancia.bppb() || refletancia.pppp()){
     motor.frente();
-  }
-  else if(refletancia.pppp()){
-    motor.parar();
   }
 
   // Curvas fortes
@@ -46,5 +44,20 @@ void Estrategia::seguirLinha(){
 }
 
 void Estrategia::desviarObstaculo(){
-  
+  motor.tras();
+  delay(500);
+  motor.curvaForteDir();
+  delay(2000);
+  motor.frente();
+  delay(1500);
+  motor.curvaForteEsq();
+  delay(2000);
+  motor.frente();
+  delay(3000);
+  motor.curvaForteEsq();
+  delay(2500);
+  motor.frente();
+  delay(1500);
+  motor.curvaForteDir();
+  delay(2000);
 }
