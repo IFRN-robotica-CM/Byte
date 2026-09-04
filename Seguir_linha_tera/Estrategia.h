@@ -8,8 +8,13 @@ class Estrategia{
   Motor motor;
   Distancia distancia;
 
-  void desviarObstaculo();
+  // Método para seguir linha
   void seguirLinha();
+
+  // Métodos para desviar de obstáculos
+  void desviarObstaculo();
+  void curvaObstaculo();
+  bool buscarLinha(int tempo);
 
   public:
   void executar();

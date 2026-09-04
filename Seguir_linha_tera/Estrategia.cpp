@@ -43,21 +43,47 @@ void Estrategia::seguirLinha(){
   }
 }
 
+void Estrategia::curvaObstaculo(){
+  motor.frente();
+  delay(1000);
+  motor.curvaForteDir();
+  delay(2000);
+  motor.frente();
+  delay(1000);
+}
+
+bool Estrategia::buscarLinha(int tempo){
+  for (int i = 0; i < tempo; i++){
+    motor.frente();
+    delay(100);
+    refletancia.ler();
+    if (!refletancia.bbbb()) {
+      return true;
+    }
+  }
+  return false;
+}
+
 void Estrategia::desviarObstaculo(){
   motor.tras();
   delay(500);
   motor.curvaForteDir();
   delay(2000);
   motor.frente();
-  delay(1500);
-  motor.curvaForteEsq();
-  delay(2000);
-  motor.frente();
-  delay(3000);
-  motor.curvaForteEsq();
-  delay(2500);
-  motor.frente();
-  delay(1500);
-  motor.curvaForteDir();
-  delay(2000);
+  delay(1000);
+  
+  bool linhaEncontrada = false
+
+  for (int i = 0; i < 4; i++){
+    if (!linhaEncontrada){
+      curvaObstaculo();
+      linhaEncontrada = buscarLinha(3000);
+    } else {
+      motor.frente();
+      delay(500);
+      motor.curvaForteEsq();
+      delay(2000);
+    }
+  }
+
 }
