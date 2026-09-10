@@ -9,5 +9,5 @@ void Distancia::print(){
   ler();
   Serial.print("Valor Distância Laser em mm: ");
   Serial.println(ValorDistanciaLaser);
-  delay(500);
+  delay(100);
 }
